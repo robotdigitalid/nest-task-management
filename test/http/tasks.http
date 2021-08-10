@@ -12,7 +12,18 @@ Content-Type: application/json
 GET {{baseUrl}}/tasks
 
 ###
+GET {{baseUrl}}/tasks?status=OPEN&search=room
+
+###
 GET {{baseUrl}}/tasks/{{taskId}}
+
+###
+PATCH {{baseUrl}}/tasks/{{taskId}}/status
+Content-Type: application/json
+
+{
+  "status": "IN_PROGRESS"
+}
 
 ###
 DELETE {{baseUrl}}/tasks/{{taskId}}
