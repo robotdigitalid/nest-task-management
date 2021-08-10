@@ -1,1 +1,10 @@
 GET {{baseUrl}}/tasks
+
+###
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+
+{
+  "title": "Clean my room",
+  "description": "Lots of cleaning has to be done"
+}
