@@ -1,0 +1,18 @@
+POST {{baseUrl}}/auth/signup
+Content-Type: application/json
+
+{
+  "username": "haqiramadhani",
+  "password": "Pass1234"
+}
+
+###
+POST {{baseUrl}}/auth/signin
+Content-Type: application/json
+
+{
+  "username": "haqiramadhani",
+  "password": "Pass1234"
+}
+
+> {% client.global.set('token', response.body.accessToken) %}

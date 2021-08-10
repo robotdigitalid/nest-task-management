@@ -1,4 +1,5 @@
 POST {{baseUrl}}/tasks
+Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
@@ -10,17 +11,21 @@ Content-Type: application/json
 
 ###
 GET {{baseUrl}}/tasks
+Authorization: Bearer {{token}}
 
 > {% client.global.set('taskId', response.body[0].id) %}
 
 ###
 GET {{baseUrl}}/tasks?status=OPEN&search=room
+Authorization: Bearer {{token}}
 
 ###
 GET {{baseUrl}}/tasks/{{taskId}}
+Authorization: Bearer {{token}}
 
 ###
 PATCH {{baseUrl}}/tasks/{{taskId}}/status
+Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
@@ -29,3 +34,4 @@ Content-Type: application/json
 
 ###
 DELETE {{baseUrl}}/tasks/{{taskId}}
+Authorization: Bearer {{token}}
