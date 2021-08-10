@@ -11,6 +11,8 @@ Content-Type: application/json
 ###
 GET {{baseUrl}}/tasks
 
+> {% client.global.set('taskId', response.body[0].id) %}
+
 ###
 GET {{baseUrl}}/tasks?status=OPEN&search=room
 
