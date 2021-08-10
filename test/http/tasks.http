@@ -15,4 +15,4 @@ GET {{baseUrl}}/tasks
 GET {{baseUrl}}/tasks/{{taskId}}
 
 ###
-DELETE {{baseUrl}}/{{taskId}}
+DELETE {{baseUrl}}/tasks/{{taskId}}
