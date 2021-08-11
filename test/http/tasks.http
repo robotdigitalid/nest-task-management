@@ -16,7 +16,7 @@ Authorization: Bearer {{token}}
 > {% client.global.set('taskId', response.body[0].id) %}
 
 ###
-GET {{baseUrl}}/tasks?status=OPEN&search=room
+GET {{baseUrl}}/tasks?search=room
 Authorization: Bearer {{token}}
 
 ###
